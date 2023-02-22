@@ -2,8 +2,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "qf", "help", "man", "lspinfo", "spectre_panel" },
   callback = function()
     vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      set nobuflisted
     ]]
   end,
 })
@@ -50,4 +50,11 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
       vim.cmd "IlluminatePauseBuf"
     end
   end,
+})
+
+-- Remove trailing whitespace on InsertLeave
+vim.api.nvim_create_autocmd({ "InsertLeave"}, {
+  callback = function()
+    vim.cmd "%s/\\s\\+$//e"
+  end
 })
