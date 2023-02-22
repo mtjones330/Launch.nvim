@@ -21,7 +21,7 @@ function M.config()
     persist_size = true,
     direction = "float",
     close_on_exit = true,
-    shell = vim.o.shell,
+    shell = "/opt/homebrew/bin/bash --login",
     float_opts = {
       border = "curved",
     },

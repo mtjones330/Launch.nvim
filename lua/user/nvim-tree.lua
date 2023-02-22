@@ -117,14 +117,14 @@ function M.config()
       enable = true,
       show_on_dirs = true,
       icons = {
-        hint = "󰌵",
+        hint = "",
         info = "",
         warning = "",
         error = "",
       },
     },
     view = {
-      width = 30,
+      width = 48,
       side = "left",
     },
   }

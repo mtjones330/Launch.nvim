@@ -36,7 +36,7 @@ sudo make install
 Make sure to remove or backup your current `nvim` directory
 
 ```sh
-git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim
+git clone https://github.com/mtjones330/nvim-basic-ide.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed
@@ -132,7 +132,7 @@ M.servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
-    	"terraform_lsp" -- New LSP
+  "terraform_lsp" -- New LSP
 }
 ```
 
