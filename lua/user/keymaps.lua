@@ -17,20 +17,26 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
+keymap("n", "<leader>v", "<C-w>v", opts)
+keymap("n", "<leader>s", "<C-w>s", opts)
+keymap("n", "<leader>q", "<cmd>q<CR>", opts)
+
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<leader><Up>", ":resize +16<cr>", opts)
+keymap("n", "<leader><Down>", ":resize -16<CR>", opts)
+keymap("n", "<leader><Left>", ":vertical resize -32<CR>", opts)
+keymap("n", "<leader><Right>", ":vertical resize +32<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<", ":BufferLineMovePrev<CR>", opts)
+keymap("n", ">", ":BufferLineMoveNext<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -42,13 +48,27 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Insert --
+
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
+
+-- Jump to end of word
+keymap("i", "<C-e>", "<ESC>Ea", opts)
+
+-- Jump to begining of word
+keymap("i", "<C-b>", "<ESC>Bi", opts)
 
 -- Visual --
+
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Move text up and down
+keymap("v", "K", ":m '<-2<CR>gv=gv")
+keymap("v", "J", ":m '>+1<CR>gv=gv")
+
+
 
 -- Plugins --
 
@@ -81,3 +101,9 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- NgSwitcher
+keymap("n", "<leader>u", ":<C-u>NgSwitchHTML<CR>", opts)
+keymap("n", "<leader>i", ":<C-u>NgSwitchTS<CR>", opts)
+keymap("n", "<leader>o", ":<C-u>NgSwitchCSS<CR>", opts)
+keymap("n", "<leader>p", ":<C-u>NgSwitchSpec<CR>", opts)
