@@ -49,8 +49,11 @@ keymap("v", "p", "P", opts)
 
 -- Insert --
 
--- Press jk fast to enter
+-- Press kj fast to exit Insert mode
 keymap("i", "kj", "<ESC>", opts)
+
+-- Press kj fast to exit Terminal mode
+keymap("t", "kj", "<C-\\><C-n>", opts)
 
 -- Jump to end of word
 keymap("i", "<C-e>", "<ESC>Ea", opts)
