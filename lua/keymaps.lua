@@ -72,7 +72,6 @@ keymap("v", "K", ":m '<-2<CR>gv=gv")
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 
 
-
 -- Plugins --
 
 -- NvimTree
@@ -114,3 +113,7 @@ keymap("n", "<leader>u", ":<C-u>NgSwitchHTML<CR>", opts)
 keymap("n", "<leader>i", ":<C-u>NgSwitchTS<CR>", opts)
 keymap("n", "<leader>o", ":<C-u>NgSwitchCSS<CR>", opts)
 keymap("n", "<leader>p", ":<C-u>NgSwitchSpec<CR>", opts)
+
+-- Harpoon
+keymap("n", "<leader><leader>", "<cmd>:lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+keymap("n", "<leader>a", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
