@@ -63,6 +63,17 @@ function M.config()
     lspconfig[server].setup(Opts)
   end
 
+  lspconfig.cucumber_language_server.setup {
+    settings = {
+      cucumber = {
+        features = { "features/**/**/*.feature" },
+        glue = { "src/steps/**/*.steps.ts" }
+      },
+    },
+    root_dir = lspconfig.util.find_git_ancestor(),
+    on_attach = on_attach,
+  }
+
   local signs = {
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
