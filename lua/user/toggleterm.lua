@@ -21,7 +21,7 @@ function M.config()
     persist_size = true,
     direction = "float",
     close_on_exit = true,
-    shell = "/opt/homebrew/bin/bash --login",
+    shell = "bash",
     float_opts = {
       border = "curved",
     },
