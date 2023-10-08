@@ -124,7 +124,7 @@ function M.config()
       },
     },
     view = {
-      width = 48,
+      width = 32,
       side = "left",
     },
   }
