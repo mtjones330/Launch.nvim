@@ -12,7 +12,7 @@ function M.config()
     {
       enabled = true,
       execution_message = nil,
-      events = {"InsertLeave", "TextChanged"},
+      events = {"InsertLeave" , "TextChanged"},
       conditions = {
         exists = true,
         filename_is_not = {},
