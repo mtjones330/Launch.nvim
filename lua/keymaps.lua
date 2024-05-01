@@ -35,8 +35,6 @@ keymap("n", "<leader><Right>", ":vertical resize +32<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<", ":BufferLineMovePrev<CR>", opts)
-keymap("n", ">", ":BufferLineMoveNext<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>c", "<cmd>nohlsearch<CR>", opts)
