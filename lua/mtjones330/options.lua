@@ -1,1 +1,1 @@
-vim.cmd("colorscheme tokyonight")
+vim.cmd("set scrolloff=5")
